@@ -2,6 +2,7 @@
 applications:
 
 - name: cf-conn
+  host: cf-conn-eatu
   memory: 768M
   random-route: true
   path: application/target/cf-conn-application.jar
@@ -9,6 +10,7 @@ applications:
   env:
     TARGET_RUNTIME: main
     JBP_CONFIG_SAPJVM_MEMORY_SIZES: 'metaspace:96m..'
+    ALLOW_MOCKED_AUTH_HEADER: true
 #  services:
 #  - your-application-logs-service
 #  - your-auditlog-service
